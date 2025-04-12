@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "medical-appointments-app"
 include(":app")
+ 

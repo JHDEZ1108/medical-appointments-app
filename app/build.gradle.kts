@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.medical_appointments_app"
+    namespace = "com.g05.medical_appointments_app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.medical_appointments_app"
+        applicationId = "com.g05.medical_appointments_app"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

@@ -1,4 +1,4 @@
-package com.example.medical_appointments_app.ui.theme
+package com.g05.medical_appointments_app.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -1,4 +1,4 @@
-package com.example.medical_appointments_app
+package com.g05.medical_appointments_app
 
 import org.junit.Test
 
