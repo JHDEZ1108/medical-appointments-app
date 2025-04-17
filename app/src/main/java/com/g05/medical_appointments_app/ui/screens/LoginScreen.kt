@@ -7,19 +7,30 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import coil.ImageLoader
+import coil.decode.SvgDecoder
+import coil.request.ImageRequest
+import coil.compose.AsyncImage
 
 @Composable
 fun LoginScreen(navController: NavController) {
-    // State variables for form inputs
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
-    // TODO: Add error validation logic here (optional)
+    val context = LocalContext.current
+
+    // Configura el cargador con soporte para SVG
+    val imageLoader = ImageLoader.Builder(context)
+        .components {
+            add(SvgDecoder.Factory())
+        }
+        .build()
 
     Column(
         modifier = Modifier
@@ -35,9 +46,23 @@ fun LoginScreen(navController: NavController) {
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
-        // Email input field
+        // Logo SVG
+        AsyncImage(
+            model = ImageRequest.Builder(context)
+                .data("android.resource://${context.packageName}/raw/medical_appointments_logo")
+                .build(),
+            contentDescription = "Medical Appointments Logo",
+            imageLoader = imageLoader,
+            modifier = Modifier
+                .height(120.dp)
+                .padding(vertical = 8.dp)
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Email input
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
@@ -49,7 +74,7 @@ fun LoginScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Password input field
+        // Password input
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
@@ -78,7 +103,6 @@ fun LoginScreen(navController: NavController) {
             text = "Don't have an account? Sign up",
             modifier = Modifier
                 .clickable {
-                    // TODO: Make sure RegisterScreen exists before using
                     navController.navigate("register")
                 }
                 .padding(8.dp),

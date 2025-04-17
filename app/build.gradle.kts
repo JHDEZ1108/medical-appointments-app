@@ -53,6 +53,10 @@ dependencies {
     implementation(libs.navigation.compose)
     implementation(libs.androidx.material3.xml)
 
+    implementation("io.coil-kt:coil-compose:2.5.0")
+    implementation("io.coil-kt:coil-svg:2.5.0")
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
