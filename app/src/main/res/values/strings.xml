@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">medical-appointments-app</string>
+    <!-- App Title -->
+    <string name="app_title">Medical Appointments</string>
+    <string name="app_name">Medical Appointments</string>
+
+    <!-- Login screen labels -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Log In</string>
+    <string name="go_to_register">Don\'t have an account? Sign up</string>
 </resources>

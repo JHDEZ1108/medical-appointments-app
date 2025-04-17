@@ -2,10 +2,19 @@ package com.g05.medical_appointments_app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Light theme colors
+val PrimaryLight = Color(0xFF007D9C)       // Deep aqua blue
+val SecondaryLight = Color(0xFF58B4AE)     // Soft teal
+val BackgroundLight = Color(0xFFFFFFFF)    // Pure white
+val SurfaceLight = Color(0xFFF2F2F2)       // Light gray for cards and surfaces
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// Dark theme colors
+val PrimaryDark = Color(0xFF00B2CA)        // Bright aqua blue
+val SecondaryDark = Color(0xFF90D9CC)      // Light teal for dark mode
+val BackgroundDark = Color(0xFF0A1A2A)     // Deep navy background
+val SurfaceDark = Color(0xFF07121D)        // Darker surface background
+
+// Accent and utility colors
+val Red = Color(0xFFC65153)               // Error or delete action
+val Gray = Color(0xFF949494)              // Disabled or secondary text
+val Green = Color(0xFF90D9CC)             // Success or active state
