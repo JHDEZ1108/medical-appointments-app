@@ -25,7 +25,7 @@ fun LoginScreen(navController: NavController) {
 
     val context = LocalContext.current
 
-    // Configura el cargador con soporte para SVG
+    // Configure Coil image loader with SVG support
     val imageLoader = ImageLoader.Builder(context)
         .components {
             add(SvgDecoder.Factory())
@@ -39,6 +39,7 @@ fun LoginScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // App title
         Text(
             text = "Medical Appointments",
             style = MaterialTheme.typography.headlineSmall,
@@ -48,7 +49,7 @@ fun LoginScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Logo SVG
+        // App logo (SVG)
         AsyncImage(
             model = ImageRequest.Builder(context)
                 .data("android.resource://${context.packageName}/raw/medical_appointments_logo")
@@ -62,7 +63,7 @@ fun LoginScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Email input
+        // Email input field
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
@@ -74,7 +75,7 @@ fun LoginScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Password input
+        // Password input field
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
@@ -98,12 +99,12 @@ fun LoginScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Navigation to Register
+        // Navigate to account type selection screen
         Text(
             text = "Don't have an account? Sign up",
             modifier = Modifier
                 .clickable {
-                    navController.navigate("register")
+                    navController.navigate("account_type_selection")
                 }
                 .padding(8.dp),
             color = MaterialTheme.colorScheme.primary
