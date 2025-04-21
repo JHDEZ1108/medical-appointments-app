@@ -33,6 +33,9 @@ androidx-material3-xml = { group = "com.google.android.material", name = "materi
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 coil-svg = { module = "io.coil-kt:coil-svg", version.ref = "coil" }
 
+material-icons-extended = "androidx.compose.material:material-icons-extended:1.7.8"
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
