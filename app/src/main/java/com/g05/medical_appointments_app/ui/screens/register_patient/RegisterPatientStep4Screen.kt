@@ -44,9 +44,18 @@ fun RegisterPatientStep4Screen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Step 4: Confirm Your Info",
+            text = "Step 4",
             style = MaterialTheme.typography.headlineSmall,
             modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center
+        )
+
+        Text(
+            text = "Confirm Your Info",
+            style = MaterialTheme.typography.bodyLarge,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 4.dp),
             textAlign = TextAlign.Center
         )
 

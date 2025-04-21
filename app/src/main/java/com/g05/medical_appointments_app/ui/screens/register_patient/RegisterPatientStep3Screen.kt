@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.ImageLoader
@@ -61,8 +62,19 @@ fun RegisterPatientStep3Screen(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Step 3: Profile Photo",
-            style = MaterialTheme.typography.headlineSmall
+            text = "Step 3",
+            style = MaterialTheme.typography.headlineSmall,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center
+        )
+
+        Text(
+            text = "Profile Photo",
+            style = MaterialTheme.typography.bodyLarge,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 4.dp),
+            textAlign = TextAlign.Center
         )
 
         Spacer(modifier = Modifier.height(24.dp))

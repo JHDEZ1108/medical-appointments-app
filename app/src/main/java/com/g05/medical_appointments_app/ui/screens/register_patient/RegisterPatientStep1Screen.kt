@@ -73,10 +73,19 @@ fun RegisterPatientStep1Screen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Step 1: Personal Info",
+                text = "Step 1",
                 style = MaterialTheme.typography.headlineSmall,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                text = "Personal Info",
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 4.dp),
+                textAlign = TextAlign.Center
             )
 
             Spacer(modifier = Modifier.height(12.dp))
