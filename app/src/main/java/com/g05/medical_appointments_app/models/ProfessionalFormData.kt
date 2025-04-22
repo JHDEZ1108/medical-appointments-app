@@ -11,5 +11,7 @@ data class ProfessionalFormData(
     val password: String = "",
     val specialty: String = "",
 
-    val profileImageUri: String? = null
+    val profileImageUri: String? = null,
+
+    val userType: String = "professional"
 )

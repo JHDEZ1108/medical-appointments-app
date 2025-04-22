@@ -8,5 +8,6 @@ data class PatientFormData(
     val phone: String = "",
     val email: String = "",
     val password: String = "",
-    val profileImageUri: String? = null
+    val profileImageUri: String? = null,
+    val userType: String = "patient"
 )
